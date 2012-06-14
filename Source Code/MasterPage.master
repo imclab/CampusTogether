@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Campus Together</title>    
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="default.css" />
+    </head>
+<body>
+<link rel = "shortcut icon" href = "images/pic.jpg">  
+<form id="form1" runat="server">
+    <div id="upbg">
+            
+    </div>
+
+    <div id="outer1">
+    <div id="header">	
+	</div>
+	<div id = "headerExtra1">
+	<div id="loginName">			
+		<asp:Label ID="L_Name" runat="server" ForeColor="#66FF99"></asp:Label>		
+		<asp:Button ID="B_LogOut" runat="server" Text="LogOut" 
+            Height="20px" onclick="B_LogOut_Click" BackColor="#323232" 
+            BorderWidth="0px" Font-Bold="True" Font-Size="12pt" ForeColor="#838900" />		
+    </div>
+	</div>
+	<div id="menu">
+		<!-- HINT: Set the class of any menu link below to "active" to make it appear active -->
+		<ul>
+			<li><asp:HyperLink ID="H_Home" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink></li>
+			<li><asp:HyperLink ID="H_Profile" runat="server" NavigateUrl="~/Profile.aspx">Profile</asp:HyperLink></li>
+			<li><asp:HyperLink ID="H_Resource" runat="server" NavigateUrl="~/Resource.aspx">Resource</asp:HyperLink></li>
+			<li><asp:HyperLink ID="H_Notice" runat="server" NavigateUrl="~/notice.aspx">Notice Boards</asp:HyperLink></li>
+			<li><asp:HyperLink ID="H_Gate" runat="server" NavigateUrl="~/Gate.aspx">Gate Entry</asp:HyperLink></li>			
+			<li><asp:HyperLink ID="H_Contact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink></li>
+		</ul>
+	</div>    
+    <table align="center" border="0" width="100%">
+        <tr>
+            <td class="style11" colspan="2">
+        <asp:ContentPlaceHolder id="MainContentPlaceHolder" runat="server">        
+            <p>
+                <br />
+            </p>		
+        </asp:ContentPlaceHolder>
+                </td>
+        </tr>        
+    </table>    
+    <div id="bottom1">
+    All Rights Reserved. ©2010 DA-IICT Campus TOGETHER    
+    </div>
+    <div id="bottom2">
+    
+        <asp:HyperLink ID="H_Res" runat="server" Font-Bold="True" Font-Size="12pt" 
+            ForeColor="Maroon" NavigateUrl="~/Files/Resource.doc" Visible="False">ResourceAllocation</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="H_GateEntry" runat="server" Font-Bold="True" 
+            Font-Size="12pt" ForeColor="#801D00" NavigateUrl="~/Files/GateEntry.doc" 
+            Visible="False">GateEntry</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="H_ENotice" runat="server" Font-Bold="True" Font-Size="12pt" 
+            ForeColor="Maroon" NavigateUrl="~/Files/Enotice.doc" Visible="False">Notice</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="H_Manual" runat="server" Font-Bold="True" Font-Size="12pt" 
+            ForeColor="Maroon" NavigateUrl="~/Files/UserManual.doc" Visible="False">UserManual</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+    
+        <asp:Button ID="B_Help" runat="server" Text="Help" BackColor="Olive" 
+            onclick="B_Help_Click" BorderWidth="0px" Font-Bold="True" Font-Size="12pt" 
+            ForeColor="Maroon" />
+    
+    </div>
+    
+    </form>
+</body>
+</html>
